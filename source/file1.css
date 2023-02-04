@@ -1,4 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+
 * {
 	padding: 0;
 	margin: 0;
@@ -76,6 +77,7 @@ p {
 
 /* Header section */
 #header {
+	user-select: none;
 	position: fixed;
 	z-index: 1000;
 	left: 0;
@@ -505,6 +507,7 @@ p {
 
 /* Footer */
 #footer {
+	user-select: none;
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 }
 #footer .footer {
@@ -540,6 +543,30 @@ p {
 #footer p {
 	color: white;
 	font-size: 1.3rem;
+}
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height:1.6 ;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul li a{
+    color:#fff;
+    text-decoration: none;
+    opacity: 0.8;
+   
+}
+.footer ul li{
+    display: block;
+    padding: 0 15px;
+    
+}
+.footer ul li a:hover{
+    color:crimson  ;
+    box-sizing: border-box;
 }
 /* End Footer */
 
@@ -599,7 +626,194 @@ p {
 	}
   }
 /* End Keyframes */
+.morepp .modal{
+    position: absolute;
+    top: 2%;
+    right: 0;
+    opacity: 0;
+    display: none;
+    bottom: -100%;
+    width: 360px;
+    transition: bottom 0.4s, opacity 0.4s;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+    overflow: scroll;
+  }
+  .morepp ::-webkit-scrollbar{
+    background: none;
+  }
+  .morepp .modal.show{
+    bottom: 0;
+    opacity: 1;
+    display: block;
+    
+  }
+  .morepp .modal .top-content{
+    background: #0080FF;
+    width: 100%;
+    border-radius: 3px 3px 0 0 ;
+    padding: 0 0 5px 0;
+  }
+  .morepp .top-content .left-text{
+    text-align: left;
+    padding: 10px 15px;
+    font-size: 18px;
+    color: #f2f2f2;
+    font-weight: 500;
+    user-select: none;
+  }
+  .morepp  .top-content .close-icon{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 23px;
+    color: silver;
+    cursor: pointer;
+  }
+  .morepp .close-icon:hover{
+    color: #b6b6b6;
+  }
+  
+  .morepp .modal .bottom-content{
+    background: white;
+    width: fit-content;
+    padding: 15px 20px;
+  }
+  .morepp .bottom-content .text{
+    font-size: 28px;
+    font-weight: 600;
+    color: #34495e;
+  }
+  .morepp .bottom-content p{
+    font-size: 18px;
+    line-height: 27px;
+    color: grey;
+  }
+  .morepp  .bottom-content .close-btn{
+    padding: 15px 0;
+  }
+  .morepp .show-btn button,
+  .morepp .close-btn button{
+    padding: 9px 13px;
+    background: #27ae60;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    color: #f2f2f2;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .morepp .show-btn button{
+    padding: 12px 15px;
+  }
+  .morepp .show-btn button:hover,
+  .morepp .close-btn button:hover{
+    background: #26a65b;
+  }
+  .weblist{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: 'poppins', sans-serif;
+    
+  }
 
+.weblist .box{
+  position: relative;
+  min-height: 425px;
+  background: #0080FF;
+  padding: 20px;
+  box-shadow: 0 35px 50px rgba(0,0,0,.1);
+}
+.weblist .box::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width:calc(100% - 75px);
+  height: 100%;
+  background: #fff;
+}
+.weblist .box h3{
+  position: relative;
+  color: #333;
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  padding-left: 70px;
+}
+.weblist .box .list{
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0 ;
+  cursor: pointer;
+}
+.weblist .box .list::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #0080FF;
+  transition: transform 0.5s;
+  transform: scaleX(0);
+  transform-origin:right;
+  border-radius: 3px;
+
+}
+.weblist .box .list:hover:before{
+  transition: transform 0.5s;
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.weblist .box .list .liImg{
+  position: relative;
+  min-width: 40px;
+  height: 40px;
+  background: #fff;
+  overflow: hidden;
+  border: 6px solid #fff;
+  box-shadow: 5px 5px 15px rgba(0,0,0,.1);
+  margin-right: 20px;
+  margin-left: 10px;
+
+}
+.weblist .box .list .liImg img{
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+}
+.weblist .box .list .content{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  color:#333;
+
+}
+.weblist .box .list .content a{
+  color: #333;
+}
+.weblist .box .list .content h4{
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  transition: 0.5s;
+}
+.weblist .box .list .content p{
+  opacity: 0.85;
+  transition: 0.5s;
+
+}
+.weblist .box .list:hover .content h4,
+.weblist .box .list:hover .content p{
+  color: #fff;
+}
 /* Media Query For Tablet */
 @media only screen and (min-width: 768px) {
 	.cta {
@@ -609,7 +823,9 @@ p {
 	h1.section-title {
 		font-size: 6rem;
 	}
-
+	.footer ul li{
+		display: inline-block;          
+	}
 	/* Hero */
 	#hero h1 {
 		font-size: 7rem;
@@ -643,7 +859,7 @@ p {
 		height: 100%;
 	}
 	/* End Project */
-
+   
 	/* About */
 	#about .about {
 		flex-direction: row;
