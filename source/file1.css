@@ -47,7 +47,7 @@ p {
 }
 .section-title .h1{
 	content: '';
-	animation: animate infinite 10s;
+	animation: animate infinite 3s;
   }
 .cta {
 	display: inline-block;
@@ -89,7 +89,7 @@ p {
 	overflow-x: hidden;
 	transition: 0.5s ease left
 }
-/* Header section */
+
 #header {
 	user-select: none;
 	position: fixed;
@@ -217,9 +217,6 @@ p {
 #header .hamburger.active .bar::after {
 	top: 0;
 }
-/* End Header section */
-
-/* Hero Section */
 #hero {
 	background-image: url(../imges/images.jfif);
 	background-size: cover;
@@ -288,9 +285,6 @@ p {
 	animation: animate infinite 15s;
   }
 
-/* End Hero Section */
-
-/* Services Section */
 #services .services {
 	flex-direction: column;
 	text-align: center;
@@ -357,9 +351,7 @@ p {
 	color: white;
 	text-align: left;
 }
-/* End Services Section */
 
-/* Projects section */
 #projects .projects {
 	flex-direction: column;
 	max-width: 1200px;
@@ -405,8 +397,10 @@ p {
 	font-weight: 500;
 	margin-top: 10px;
 }
-#projects .project-info p {
+#projects .project-info p,#projects .project-info li{
 	color: white;
+	font-size:  16px;
+	text-align: left;
 }
 #projects .project-img {
 	flex-basis: 50%;
@@ -430,9 +424,7 @@ p {
 #projects .project-item:hover .project-img img {
 	transform: scale(1.1);
 }
-/* End Projects section */
 
-/* About Section */
 #about .about {
 	flex-direction: column-reverse;
 	text-align: center;
@@ -482,9 +474,7 @@ p {
 	border: 7px solid crimson;
 	z-index: -1;
 }
-/* End About Section */
 
-/* contact Section */
 #contact .contact {
 	flex-direction: column;
 	max-width: 1200px;
@@ -492,7 +482,7 @@ p {
 	width: 90%;
 }
 #contact .contact-items {
-	/* max-width: 400px; */
+
 	width: 100%;
 }
 #contact .contact-item {
@@ -531,7 +521,7 @@ p {
 	line-height: 2rem;
 	font-weight: 500;
 }
-/*End contact Section */
+
 .privacy{
 	margin-top: 60px;
 	padding: 20px;
@@ -542,7 +532,7 @@ p {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Footer */
+
 #footer {
 	user-select: none;
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
@@ -605,9 +595,7 @@ p {
     color:crimson  ;
     box-sizing: border-box;
 }
-/* End Footer */
 
-/* Keyframes */
 @keyframes hamburger_puls {
 	0% {
 		opacity: 1;
@@ -662,9 +650,7 @@ p {
 	  content: 'Smart Cards';
 	}
   }
-/* End Keyframes */
 
-/* Media Query For Tablet */
 @media only screen and (min-width: 768px) {
 	.cta {
 		font-size: 2.5rem;
@@ -676,20 +662,16 @@ p {
 	.footer ul li{
 		display: inline-block;          
 	}
-	/* Hero */
+
 	#hero h1 {
 		font-size: 7rem;
 	}
-	/* End Hero */
 
-	/* Services Section */
 	#services .service-bottom .service-item {
 		flex-basis: 45%;
 		margin: 2.5%;
 	}
-	/* End Services Section */
 
-	/* Project */
 	#projects .project-item {
 		flex-direction: row;
 	}
@@ -708,9 +690,7 @@ p {
 	#projects .all-projects .project-img {
 		height: 100%;
 	}
-	/* End Project */
-   
-	/* About */
+	
 	#about .about {
 		flex-direction: row;
 	}
@@ -733,9 +713,7 @@ p {
 	#about .col-right h1 {
 		text-align: left;
 	}
-	/* End About */
 
-	/* contact  */
 	#contact .contact {
 		flex-direction: column;
 		padding: 100px 0;
@@ -767,13 +745,10 @@ p {
 		text-align: left;
 		padding-left: 20px;
 	}
-	/* End contact  */
 }
-/* End Media Query For Tablet */
 
-/* Media Query For Desktop */
 @media only screen and (min-width: 1200px) {
-	/* header */
+
 	#header .hamburger {
 		display: none;
 	}
@@ -793,14 +768,14 @@ p {
 	#header .nav-list ul a:after {
 		display: none;
 	}
-	/* End header */
+
 
 	#services .service-bottom .service-item {
 		flex-basis: 22%;
 		margin: 1.5%;
 	}
 }
-/* End  Media Query For Desktop */
+
 
 .loader {
 	align-items: center;

@@ -43,6 +43,7 @@ shareButton.addEventListener("click", () => {
       })
       .catch(console.error);
   } else {
-   document.write("Please use Mobile Device");
+  alert("Your Device is Not Supported!!");
   }
+
 });
