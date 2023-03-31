@@ -5,6 +5,7 @@ window.addEventListener("load", function () {
   document.querySelector(".loader").remove();
 });
 
+
 const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
 const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
 const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
@@ -32,14 +33,16 @@ menu_item.forEach((item) => {
 });
 
 const shareButton = document.getElementById("shareBtn");
+const message = "Check out This website For Cybercafe Related Works";
 const title = window.document.title;
 const url = window.document.location.href;
 shareButton.addEventListener("click", () => {
   if (navigator.share) {
     navigator
-      .share({ title: `${title}`, url: `${url}` })
+      .share({ message, title: `${title}`, url: `${url}` })
       .then(() => {
-        console.log("thanks For sharing!");
+
+        console.log("Thanks For sharing!");
       })
       .catch(console.error);
   } else {
@@ -47,3 +50,17 @@ shareButton.addEventListener("click", () => {
   }
 
 });
+
+ $('.service-item').click(function(){
+    $('.modal').toggleClass("show");
+    $('service-item').addClass("disabled");
+  });
+  $('.close-icon').click(function(){
+    $('.modal').toggleClass("show");
+    $('service-item').removeClass("disabled");
+  });
+  $('.close-btn').click(function(){
+    $('.modal').toggleClass("show");
+    $('service-item').removeClass("disabled");
+  });
+

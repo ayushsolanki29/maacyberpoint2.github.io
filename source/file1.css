@@ -345,6 +345,7 @@ p {
 	color: white;
 	margin-bottom: 10px;
 	text-transform: uppercase;
+	cursor: pointer;
 }
 #services .service-item p,#services .service-item li {
 	font-size:  16px;
@@ -650,6 +651,211 @@ p {
 	  content: 'Smart Cards';
 	}
   }
+ 
+  .morepp .modal {
+	position: fixed;
+	top: 35%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 11111;
+	width: 360px;
+	height:559px;
+	padding: 0;
+	opacity: 0;
+	display: none;
+	background-color: white;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+	overflow: scroll;
+	transition: opacity 0.4s, transform 0.4s;
+	transform: translateY(-35%);
+	
+  }
+  
+  .morepp ::-webkit-scrollbar {
+	display: none;
+  }
+  
+  .morepp .modal.show {
+	opacity: 1;
+	display: block;
+	transform: translateY(1);
+  }
+  
+  .morepp .top-content {
+	background-color: #29323c;
+	border-radius: 3px 3px 0 0;
+  }
+  
+  .morepp .left-text {
+	padding: 10px 15px;
+	font-size: 18px;
+	color: #f2f2f2;
+	font-weight: 500;
+	user-select: none;
+  }
+  
+  .morepp .close-icon {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	font-size: 23px;
+	color: silver;
+	cursor: pointer;
+  }
+  
+  .morepp .close-icon:hover {
+	color: #b6b6b6;
+  }
+  
+  .morepp .bottom-content {
+	padding: 15px 20px;
+  }
+  
+  .morepp .text {
+	font-size: 28px;
+	font-weight: 600;
+	color: #34495e;
+  }
+  
+  .morepp p {
+	font-size: 18px;
+	line-height: 27px;
+	color: grey;
+  }
+  
+  .morepp button {
+	padding: 9px 13px;
+	background-color: crimson;
+	border: none;
+	outline: none;
+	font-size: 12px;
+	text-transform: uppercase;
+	border-radius: 3px;
+	color: #f2f2f2;
+	font-weight: 600;
+	cursor: pointer;
+	transition: 0.2s;
+	margin-top: 10px;
+  }
+  
+  .morepp .show-btn button {
+	padding: 12px 15px;
+  }
+  
+  .morepp .show-btn button:hover,
+  .morepp .close-btn button:hover {
+	background-color: rgb(175, 14, 46);
+  }
+  
+  .weblist {
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	font-family: 'poppins', sans-serif;
+	}
+	
+	.weblist .box {
+	position: relative;
+	min-height: 425px;
+	background: #34495e;
+	padding: 20px;
+	box-shadow: 0 35px 50px rgba(0, 0, 0, 0.1);
+	}
+	
+	.weblist .box::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: calc(100% - 75px);
+	height: 100%;
+	background: #fff;
+	}
+	
+	.weblist .box h3 {
+	position: relative;
+	color: #333;
+	font-size: 1.3em;
+	margin-bottom: 20px;
+	padding-left: 70px;
+	}
+	
+	.weblist .box .list {
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	margin: 10px 0;
+	cursor: pointer;
+	}
+	
+	.weblist .box .list::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #29323c;
+	transition: transform 0.5s;
+	transform: scaleX(0);
+	transform-origin: right;
+	border-radius: 3px;
+	}
+	
+	.weblist .box .list:hover::before {
+	transform: scaleX(1);
+	transform-origin: left;
+	}
+	
+	.weblist .box .list .liImg {
+	position: relative;
+	min-width: 40px;
+	height: 40px;
+	background: #fff;
+	overflow: hidden;
+	border: 6px solid #fff;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+	margin-right: 20px;
+	margin-left: 10px;
+	}
+	
+	.weblist .box .list .liImg img {
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	}
+	
+	.weblist .box .list .content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	color: #333;
+	}
+	
+	.weblist .box .list .content a {
+	color: #333;
+	}
+	
+	.weblist .box .list .content h4 {
+	font-weight: 600;
+	text-transform: uppercase;
+	line-height: 1.2em;
+	transition: 0.5s;
+	}
+	
+	.weblist .box .list .content p {
+	opacity: 0.85;
+	transition: 0.5s;
+	}
+	
+	.weblist .box .list:hover .content h4,
+	.weblist .box .list:hover .content p {
+	color: #fff;
+	}
 
 @media only screen and (min-width: 768px) {
 	.cta {
