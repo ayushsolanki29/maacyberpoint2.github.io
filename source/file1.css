@@ -651,14 +651,25 @@ p {
 	  content: 'Smart Cards';
 	}
   }
- 
+ .morepp.show{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 3333;
+	backdrop-filter: blur(5px);
+ }
   .morepp .modal {
 	position: fixed;
 	top: 35%;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	z-index: 11111;
+	z-index: 11;
 	width: 360px;
 	height:559px;
 	padding: 0;
@@ -667,9 +678,8 @@ p {
 	background-color: white;
 	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 	overflow: scroll;
-	transition: opacity 0.4s, transform 0.4s;
-	transform: translateY(-35%);
-	
+	transition:opacity 0.3s ease-in-out, transform 0.4s;
+	transform: translate(50%, -30%);
   }
   
   .morepp ::-webkit-scrollbar {
@@ -950,6 +960,9 @@ p {
 		width: 100%;
 		text-align: left;
 		padding-left: 20px;
+	}
+	.morepp .modal{
+		top: 30%;
 	}
 }
 

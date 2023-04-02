@@ -46,21 +46,26 @@ shareButton.addEventListener("click", () => {
       })
       .catch(console.error);
   } else {
-  alert("Your Device is Not Supported!!");
+    if (confirm("Sorry, your browser or device does not support sharing URLs. \n Do you want to copy the URL to your clipboard instead?")) {
+      navigator.clipboard.writeText(url);
+      alert("Link copied to clipboard!");
   }
-
+  }
 });
 
  $('.service-item').click(function(){
     $('.modal').toggleClass("show");
+    $('.morepp').toggleClass("show");
     $('service-item').addClass("disabled");
   });
   $('.close-icon').click(function(){
     $('.modal').toggleClass("show");
     $('service-item').removeClass("disabled");
+    $('.morepp').removeClass("show");
   });
   $('.close-btn').click(function(){
     $('.modal').toggleClass("show");
     $('service-item').removeClass("disabled");
+    $('.morepp').removeClass("show");
   });
 
