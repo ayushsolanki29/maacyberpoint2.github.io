@@ -967,8 +967,8 @@ p {
 }
 @media only screen and (max-width: 1200px) {
 .morepp .modal{
-	transform: translate(10%,-30%);
-		width: 300px;
+	transform: translate(1%,-39%);
+		
 }
 }
 @media only screen and (min-width: 1200px) {
